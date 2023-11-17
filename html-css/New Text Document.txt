@@ -1,0 +1,33 @@
+https://www.tripoetic.com/wp-content/uploads/2020/08/tripoetic-trips-4.jpg
+https://www.tripoetic.com/wp-content/uploads/2020/08/tripoetic-trips-1.jpg
+https://www.tripoetic.com/wp-content/uploads/2020/08/tripoetic-trips-2.jpg
+https://www.tripoetic.com/wp-content/uploads/2020/08/tripoetic-trips-3.jpg
+https://www.tripoetic.com/wp-content/uploads/2020/08/tripoetic-trips-5.jpg
+https://www.tripoetic.com/wp-content/uploads/2020/08/tripoetic-trips-6.jpg
+
+
+
+
+
+
+<div class="mySlides display-container center">
+    <img src="Slideshow/la.jpg" style="width:100%">
+    <div class="display-bottommiddle container text-white padding-32 hide-small">
+      <h3>Los Angeles</h3>
+      <p><b>We had the best time playing at Venice Beach!</b></p>   
+    </div>
+  </div>
+  <div class="mySlides display-container center">
+    <img src="Slideshow/ny.jpg" style="width:100%">
+    <div class="display-bottommiddle container text-white padding-32 hide-small">
+      <h3>New York</h3>
+      <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
+    </div>
+  </div>
+  <div class="mySlides display-container center">
+    <img src="Slideshow/chicago.jpg" style="width:100%">
+    <div class="display-bottommiddle container text-white padding-32 hide-small">
+      <h3>Chicago</h3>
+      <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
+    </div>
+  </div>

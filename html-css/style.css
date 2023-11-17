@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    width:auto;
+  }
+  html,body{
+    height: 100%;
+    width: 100%;
+  }
+  /* Add some padding and a black background color to feed */
+  @media only screen and (max-width: 600px){}
+  .nav{
+    background-color: #39A7FF;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+  }
+
+  .nav p{
+    color: #f2f2f2;
+    font-family: 'Bebas Neue', Times, serif;
+    text-align: left;
+    padding: 10px 10px 10px 25px;
+    font-size: 40px;
+
+   
+  }
+  .navbar {
+    overflow: hidden;
+    background-color: #39A7FF;
+  
+   
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 18px ;
+    text-decoration: none;
+    margin-left: 40px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+    background-color:#87C4FF;
+    color: black;
+    border-radius: 20px;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+    background-color: #4CAF56;
+    color: white;
+}
+
+
+/* image content */
+.main-content{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.main-content img{
+  width: 100px;
+  height: 30rem;
+  opacity: 100;
+  object-fit:contain;
+  margin: 0;
+
+}
+
+.img-content p{
+  color: rgb(19, 0, 67);
+  font-size: 50px;
+  position: absolute;
+  top: 15rem;
+  left: 15rem;
+  animation: mainani 2s ease-in-out;
+  border: 4px dashed rgb(24, 44, 126);
+  padding: 20px;
+  font-weight: 400;
+  
+}
+
+@keyframes mainani{
+0%{
+    transform: scale(0%);
+    font-size: 5px;
+  }
+  100% {
+    transform: scale(100%);
+    font-size: 50px;
+  }
+}
+.main-content button{
+  background-color: #5db4e3;
+  color: rgb(0, 0, 0);
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  position: absolute;
+  top: 25rem;
+  left: 43rem;
+  border: none;
+  width: 220px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.main-content button:hover{
+  background-color: #00a6ff;
+  color: rgb(12, 12, 12);
+}
+
+
+/* about content */
+.about{
+  background-color: #d0e5f9;
+  width: 100%;
+  height: 18rem;
+  
+  
+  
+}
+
+.about h5{
+  font-family: 'Times New Roman', Times, serif;
+ font-size: 50px;
+ padding:10px 0px 10px 15px;
+}
+
+.about p{
+  font-family: 'Raleway', sans-serif;
+  font-style: bold;
+ font-size: 25px;
+ padding:10px 0px 10px 15px;
+}
+  
+/* awards */
+h6{
+  font-family:oswald;
+  font-size: 40px;
+  padding:10px 0px 10px 15px;
+  background-color: #d0e5f9;
+
+}
+.box{
+  display: flex;
+  background-color: #d0e5f9;
+  width: 100%;
+  height: 20rem;
+  align-items: center;
+  justify-content:space-evenly;
+}
+
+.box1,.box2,.box3,.box4,.box5{
+  height: 250px;
+  width:250px;
+  border-radius: 10px;
+  border: 1px solid #0b007f;
+  margin-bottom: 30px;
+  padding: 25px;
+  padding-left: 20px;
+  box-shadow: 10px 10px 10px #166985;
+  background-color: #58d6e4;
+  font-size: 22px;
+}
+
+
+/* appointment */
+/* .appointment{
+  color:rgb(0, 0, 0);
+  background-color: #d0e5f9;
+  width: 100%;
+  height: 40rem;
+} */
+
+.tickets h2{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
+  padding:10px 0px 10px 15px;
+  background-color: #d0e5f9;
+}
+
+.tickets {
+  width: 100%;
+  padding: 20px;
+  background-color:  #d0e5f9;
+  height: 40rem;
+}
+
+.booking{
+  width: 100%;
+  margin-left: 20px;
+  margin-top: 2rem;
+ 
+}
+
+#name,#email,#phone{
+  margin: 30px 10px 100px 10px;
+  padding: 10px;
+  padding-right: 20px;
+  border-radius: 5px;
+  border: none;
+  width: 220px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#email,#phone{
+  margin-left: 70px;
+}
+#date,#time,#service{
+  margin: 50px 10px 30px 10px;
+  padding: 10px;
+  padding-right: 20px;
+  border-radius: 5px;
+  border: none;
+  width: 220px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.booking button{
+  display: block;
+  position:absolute;
+  left: 0px;
+  margin: 50px;
+  padding: 10px;
+  padding-right: 20px;
+  border-radius: 5px;
+  border: none;
+  width: 220px;
+  font-size: 20px;
+  font-weight: 400;
+
+
+}
+
+
+.booking button:hover{
+  background-color: #00a6ff;
+  color: rgb(12, 12, 12);
+}
+
+/* footer */
+
+footer {
+  background-color: #132260;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-copyright{
+  height: 30px;
+  text-align: center;
+  color: #fff;
+}
+.footer-content {
+  background-color: #132260;
+  color: #fff;
+  height:100px ;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content a{
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  text-decoration:none;
+  padding: 30px;
+  margin: 10px;
+}
+
+.mySlides fade{
+  width: 100px;
+ margin: 0;
+}

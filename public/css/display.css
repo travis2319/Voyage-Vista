@@ -1,0 +1,207 @@
+/* Codepen Specific */
+* {
+    margin:0;
+    padding:0;
+    font-family:Helvetica, Arial, sans-serif;
+  }
+  body {
+    background:#f1f3f4;
+    
+  }
+  
+  /* .GCSJ-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+  
+  
+  input[type=text], textarea, input[type=email], input[type=password], input[type=tel], input[type=url], input[type=search], input[type=date] {
+      padding: 10px;
+      width: 100%;
+      font-size: 14px;
+      font-family: inherit;
+      line-height: 24px;
+      color: #555;
+      background-color: #f1f1f1;
+      border: none;
+      transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+  }
+  input[type=text], textarea, input[type=email], input[type=password], input[type=tel], input[type=url], input[type=search], input[type=date], .material.woocommerce-page[data-form-style="default"] input#coupon_code {
+      background-color: rgba(0,0,0,0.1);
+      border-radius: 4px;
+      border: 2px solid rgba(0,0,0,0);
+  }
+  /* /end Codepen Specific */
+  .container-wrap{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  /* Ladder Navigation */
+    #leaderboard {
+        padding:10px;
+    }
+    .ladder-nav {
+        display:flex;
+        flex-wrap:wrap;
+        align-items: center;
+        background: #8ab4f8;
+        padding:10px 25px;
+        border-radius:10px;
+        border:1px solid #f1f3f4;
+  
+    }
+    .ladder-title {
+      flex:2;
+  
+    }
+    .ladder-search {
+      flex:1;
+      padding-right:25px;
+    }
+    .ladder-title {
+      font-size:20px;
+      color:#888DFF!important;
+      font-weight:bold;
+      text-transform:uppercase;
+    }
+  
+    .ladder-title img {
+    border-radius: 10px;
+    }
+  
+    .ladder-search input {
+        color:white
+    }
+    .ladder-search input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #fdfdfd;
+    }
+    .ladder-search input::-moz-placeholder { /* Firefox 19+ */
+      color: #888DFF;
+    }
+    .ladder-search input:-ms-input-placeholder { /* IE 10+ */
+        color: #888DFF;
+    }
+    .ladder-search input:-moz-placeholder { /* Firefox 18- */
+        color: #888DFF;
+    }
+  /* /end Ladder Navigation */
+  /* Leaderboard Results */
+  .leaderboard-results {
+    text-align:left;
+    border-collapse: collapse;
+    border-radius: 10px;
+  }
+  .leaderboard-results thead th {
+    padding: 25px;
+    color:#747474;
+    font-size:14px;
+    font-weight:bold;
+    background-color: #ccf7c8;
+  }
+  
+  .leaderboard-results tbody td {
+    padding:15px 25px;
+    /* background:#fffdfd; */
+    font-size:16px;
+    border-bottom:1px solid #232323;
+    border-top: 0px solid #232323;
+  }
+  .leaderboard-results tbody td:nth-of-type(7) {
+    font-weight:bold;
+  }
+  .leaderboard-results tbody tr:hover td {
+      background:#fde293
+      ;
+  }
+  .leaderboard-results tbody tr {
+    color:#747474;
+  }
+  #rankings tbody .completed {
+    color:#1ca841;
+  }
+  .leaderboard-results tbody span {
+    font-weight:bold;
+    padding:10px 15px;
+    border-radius:50%;
+  }
+  .leaderboard-results tbody tr:first-child span {
+    background:#5055CB;
+    color:white;
+  }
+  .leaderboard-results tbody tr span {
+    background:#262626;
+    color:#747474;
+  }
+  
+  #rankings tbody .even-row {
+    background-color: #f9f9f9; /* Light gray for even rows */
+  }
+  
+  #rankings tbody .odd-row {
+    background-color: #e3e3e3; /* Lighter gray for odd rows */
+  }
+  
+  /* /end Leaderboard Results */
+  .container {
+    margin: 30px auto;
+    margin-bottom: 30px;
+    width: 75%;
+    text-align: center;
+  }
+  
+  .progress {
+    padding: 6px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.25);  
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  }
+  
+  .progress-bar {
+    height: 18px;
+    border-radius: 30px;
+    background-image: 
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+    transition: 0.4s linear;  
+    transition-property: width, background-color;    
+  }
+  
+  .progress-moved .progress-bar {
+    width: 75%; 
+    background-color: #f68757;  
+    animation: progressAnimation 6s;
+  }
+  
+  @keyframes progressAnimation {
+    0%   { width: 0%; background-color: #f8b69a;}
+    100% { width: 75%; background-color: #f68757; }
+  }
+  
+  .progressbar li {
+    color:#8f8f8f;
+    list-style: none;
+    display: inline-block;
+    width: 30.33%;
+    width: 47%; 
+    position: relative;
+    text-align: right;
+    cursor: pointer;
+  }
+  
+  h1, p{
+    color:#8f8f8f
+  }
+  
+  .congrats {
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 20px;
+    font-size: 2rem;
+    border-block: 3px solid rgb(235, 231, 18); 
+    color:#b2b23a 
+  }

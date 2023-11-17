@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/display.css" />
+</head>
+
+<body>
+    <div class="container">
+        <table id="rankings" class="leaderboard-results" width="100%">
+            <thead>
+                <tr>
+                    <th>sr. no.</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Location</th>
+                    <th>Destination</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Service</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Load SCRIMcom Leaderboard Ranings -->
+                
+                <% data.forEach((item,index) => { %>
+                    <tr>
+                      <td><%= index + 1 %></td>
+                      <td><%= item.name %></td>
+                      <td><%= item.email %></td>
+                      <td><%= item.location %></td>
+                      <td><%= item.destination %></td>
+                      <td><%= item.date %></td>
+                      <td><%= item.time %></td>
+                      <td><%= item.service %></td>
+                    </tr>
+                  <% }); %>
+            </tbody>
+        </table>
+    </div>
+<!-- <%- include('partials/footer') %> -->

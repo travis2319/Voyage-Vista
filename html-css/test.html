@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form on the Right with Video Background</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        #video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        .center-container {
+            text-align: left;
+            margin-right: 100px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            width: 300px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<video id="video-background" autoplay muted loop>
+    <source src="../public/assets/flight-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<div class="center-container">
+    <form method="post" action="/submit">
+        <div class="booking">
+            <div class="top-form">
+              <label for="name" id="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="Full Name" required>
+
+              <label for="email" id="email">Email: </label>
+              <input type="email" id="email" name="email" placeholder="Email ID" required>
+
+              <label for="phone" id="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="Phone No." required>
+            </div>
+            <div class="bottom-form">
+
+
+              <label for="date" id="date">Preferred Date:</label>
+              <input type="date" id="date" name="date" required>
+
+              <label for="time" id="time">Preferred Time:</label>
+              <input type="time" id="time" name="time" required>
+
+              <label for="service" id="service">Select Service:</label>
+              <select id="service" name="service" required>
+                <option>Select</option>
+                <option value="consultation">Overseas</option>
+                <option value="checkup">Domestic</option>
+              </select>
+            </div>
+            <button type="submit">Book Tickets</button>
+
+          </div>    
+    </form>
+</div>
+</div>
+</body>
+</html>
