@@ -53,21 +53,9 @@ app.post('/submit',(req,res)=>{
         service:service
     })
 
-
-    // user.insertOne(booking, (err, result) => {
-    //     if (err) {
-    //       console.error('Error inserting document:', err);
-    //       res.status(500).send('Error submitting booking');
-    //       return;
-    //     }
-    //     console.log('Booking submitted successfully');
-    //     res.send('Booking submitted successfully');
-    //   });
-    // console.log('form submitted');
-
     newBooking.save();
-      console.log("form submitted");
-      res.redirect('/')
+    console.log("form submitted");
+    res.redirect('/')
 })
 
 async function deleteAll() {
