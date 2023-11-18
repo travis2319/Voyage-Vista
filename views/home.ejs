@@ -1,59 +1,104 @@
 <%- include('partials/header.ejs'); %>
-<%- include('partials/carousel.ejs'); %>
-  <section>
-    <div class="about">
-      <h5>About Us</h5>
-      <p>
-        Welcome to VoyageVista, where your travel dreams take flight. At TrekVista, we're committed to making your
-        journey across the globe as effortless as the wind beneath your wings. Our platform serves as your
-        passport to adventure, providing a seamless interface for booking extraordinary travel experiences
-        curated by seasoned explorers. Navigating our user-friendly website is your first step towards unlocking
-        a world of wonders, connecting you with tailor-made journeys that suit your wanderlust.</p><br>
-    </div>
-  </section>
-  <div class="container">
-    <video id="video-background" autoplay muted loop>
-        <source src="assets/flight-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    
-    <div class="center-container" id="tickets">
-        <form action="/submit" method="post" >
-            <div class="booking">
-                <div class="top-form">
-                  <label for="name" id="name">Name:</label>
-                  <input type="text" id="name" name="name" placeholder="Full Name" required>
-    
-                  <label for="email" id="email">Email: </label>
-                  <input type="email" id="email" name="email" placeholder="Email ID" required>
-    
-                  <label for="location" id="location">Location</label>
-                  <input type="text" id="location" name="location" placeholder="Location" required>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong fixed-top">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Navbar brand -->
+    <a class="navbar-brand text-white-80  " href="#">VoyageVista</a>
 
-                  <label for="destination" id="destination">Destination</label>
-                  <input type="text" id="destination" name="destination" placeholder="Destination" required>
-                </div>
-                <div class="bottom-form">
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <!-- Left links -->
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-dark">
+        <li class="nav-item">
+          <a class="nav-link text-muted fw-bold" href="#">Home</a>
+        </li>
+        <% if(!isAuth) {%>
+        <li class="nav-item">
+          <a class="nav-link text-muted fw-bold" href="/login">Login</a>
+        </li>
+        <% } else {%>
+        <li class="nav-item">
+          <a class="nav-link text-muted fw-bold" href="#tickets">Tickets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-muted fw-bold" href="display">Display</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-muted fw-bold" href="/logout">Logout</a>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Navbar -->
+<%- include('partials/carousel.ejs'); %>
+<section>
+  <div class="about">
+    <h5>About Us</h5>
+    <p>
+      Welcome to VoyageVista, where your travel dreams take flight. At TrekVista, we're committed to making your
+      journey across the globe as effortless as the wind beneath your wings. Our platform serves as your
+      passport to adventure, providing a seamless interface for booking extraordinary travel experiences
+      curated by seasoned explorers. Navigating our user-friendly website is your first step towards unlocking
+      a world of wonders, connecting you with tailor-made journeys that suit your wanderlust.</p><br>
+  </div>
+</section>
+<div class="container">
+  <video id="video-background" autoplay muted loop>
+    <source src="assets/flight-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <% if(isAuth){ %>
+  <div class="center-container" id="tickets">
     
-    
-                  <label for="date" id="date">Preferred Date:</label>
-                  <input type="date" id="date" name="date" required>
-    
-                  <label for="time" id="time">Preferred Time:</label>
-                  <input type="time" id="time" name="time" required>
-    
-                  <label for="service" id="service">Select Service:</label>
-                  <select id="service" name="service" required>
-                    <option>Select</option>
-                    <option value="Overseas">Overseas</option>
-                    <option value="Domestic">Domestic</option>
-                  </select>
-                </div>
-                <button type="submit">Book Tickets</button>
-    
+    <form action="/submit" method="post">
+      <div class="booking">
+        <div class="top-form">
+          <label for="name" id="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Full Name" required>
+
+          <!-- <label for="email" id="email">Email: </label>
+          <input type="email" id="email" name="email" placeholder="Email ID" required> -->
+
+          <label for="location" id="location">Location</label>
+          <input type="text" id="location" name="location" placeholder="Location" required>
+
+          <label for="destination" id="destination">Destination</label>
+          <input type="text" id="destination" name="destination" placeholder="Destination" required>
+        </div>
+        <div class="bottom-form">
+
+
+          <label for="date" id="date">Preferred Date:</label>
+          <input type="date" id="date" name="date" required>
+
+          <label for="time" id="time">Preferred Time:</label>
+          <input type="time" id="time" name="time" required>
+
+          <label for="service" id="service">Select Service:</label>
+          <select id="service" name="service" required>
+            <option>Select</option>
+            <option value="Overseas">Overseas</option>
+            <option value="Domestic">Domestic</option>
+          </select>
+        </div>
+        <button type="submit">Book Tickets</button>
+        
               </div>    
         </form>
+        
     </div>
+    <% } else { %>
+      <div class=" blur-div hero__caption">
+        <h1>Travel booking</h1>
+        <p>Register for book tickets</p>
+        <div class="hero__btn">
+          <a href="/login" class="btn btn-outline-light" tabindex="0">Login</a>
+        </div>
+      </div>
+      <%}%>
     </div>
 
 <%- include('partials/footer.ejs') %>

@@ -116,6 +116,22 @@ button {
   border-radius: 4px;
   cursor: pointer;
 }
+.log {
+  color: rgb(104, 85, 224);
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(104, 85, 224, 1);
+}
+.blur-div {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #fffe;
+  max-width: 500px;
+  margin: 200px 200px;
+  padding: 50px;
+  position: relative;
+  z-index: 1;
+ }
 /* .tickets{
   
 } */
