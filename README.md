@@ -17,7 +17,10 @@ Install booking-appointment-app with git clone
   nodemon index.js
 ```
     
+## Picture
+![image](https://github.com/travis2319/Voyage-Vista/assets/41868352/964ea600-2677-4d29-ae99-ec0ce5323e30)
 
+![image](https://github.com/travis2319/Voyage-Vista/assets/41868352/10bd156c-5c57-4235-9a9b-d75db43a3321)
 
 ## Tech Stack
 
